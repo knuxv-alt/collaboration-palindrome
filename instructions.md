@@ -38,12 +38,8 @@ Créer un script Python qui lit des fichiers texte, compte le nombre de palindro
 6. Créez une Pull Request sur GitHub pour fusionner votre travail dans la branche principale.
 
 ## Spécifications
-- Le script doit accepter le chemin d'un dossier contenant des fichiers texte comme argument.
+- Le script doit accepter le chemin d'un ficher comme argument.
 - Pour chaque fichier, comptez les palindromes dans chaque paragraphe.
 - Affichez les résultats dans le terminal.
-- Sauvegardez les résultats dans un fichier JSON nommé `resultats_palindromes.json`.
 - Un palindrome est un mot ou une phrase qui se lit de la même façon dans les deux sens, en ignorant les espaces, la ponctuation et la casse.
-
-## Conseils
-- Utilisez la bibliothèque `sys` pour gérer les arguments de ligne de commande.
-- Utilisez la bibliothèque `json` pour créer le fichier de sortie JSON.
+- 
