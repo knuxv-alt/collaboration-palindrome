@@ -11,8 +11,8 @@ def split_into_paragraphs(text: str) -> List[str]:
     pass
 
 def is_palindrome(word: str) -> bool:
-    # TODO: Check if a word is a palindrome
-    pass
+    word = word.lower()
+    return word == word[::-1]
 
 def count_palindromes(paragraph: str) -> List[str]:
     # TODO: Find all palindromes in a paragraph
@@ -44,6 +44,5 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python palindrome_counter.py <file_path>")
         sys.exit(1)
-    
     file_path = sys.argv[1]
     main(file_path)
