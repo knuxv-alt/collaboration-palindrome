@@ -8,6 +8,9 @@ def read_file(file_path: str) -> str:
 def split_into_paragraphs(text: str) -> List[str]:
     # TODO: Split the text into paragraphs, a delimiter between two paragraphs is \n\n
     # Return a list of paragraphs
+    paragraphs = []
+    paragraphs = text.split("\n\n")
+    return paragraphs
     pass
 
 def is_palindrome(word: str) -> bool:
