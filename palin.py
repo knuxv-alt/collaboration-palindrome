@@ -1,5 +1,6 @@
 import sys
 from typing import List, Dict
+import re
 #Commentaire
 #Test Fiona
 
@@ -11,8 +12,7 @@ def read_file(file_path: str) -> str:
     return txt
 
 def split_into_paragraphs(text: str) -> List[str]:
-    paragraphs = []
-    paragraphs = str.split("\n\n")
+    paragraphs = text.split("\n\n")
     return paragraphs
 
 def is_palindrome(word: str) -> bool:
@@ -25,25 +25,23 @@ def count_palindromes(paragraph: str) -> List[str]:
     # Split paragraph into words (SpaCy, NLTK or regex) and check for each word
     # Return a list of palindromes
     
-    List=[]
-    words = re.findall(r"\W+", paragraph.lower())
-    for i in words: 
-    if is_palindrome(i)==True    ##i == word[::-1]
-            List.add(word)
-               
-    return List
+    lst_palindrome =[]
+    words = re.findall(r"\w+", paragraph.lower())
+    for word in words: 
+        if is_palindrome(word=word):
+                lst_palindrome.append(word)
+    return lst_palindrome
 
 def process_file(file_path: str) -> Dict[int, List[str]]:
     content = read_file(file_path)
     paragraphs = split_into_paragraphs(content)
     palindromes_by_paragraph = {}
     for i, paragraph in enumerate(paragraphs, 1):
-        words = paragraph.split()
-
-        palindromes = count_palindromes(words)
-
+        palindromes = count_palindromes(paragraph=paragraph)
         if palindromes:
             palindromes_by_paragraph[i] = palindromes
+        else:
+            palindromes_by_paragraph[i] = "No Palindrome"
 
     return palindromes_by_paragraph
 

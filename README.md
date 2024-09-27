@@ -53,3 +53,38 @@ Dans ce workflow, chaque développeur travaille sur une branche de fonctionnalit
 - Créer une Pull Request pour chaque fonctionnalité terminée
 
 En suivant ce workflow, vous assurez une collaboration efficace et maintenez un historique de projet clair et organisé.
+
+
+##  Résulats
+
+```bash
+kevin-desktop@kevindesktop ~/D/t/collaboration-palindrome (main)> python palin.py  palin.txt                                        (base) 
+Paragraph 1:
+  Found 7 palindrome(s):
+    - radar
+    - kayak
+    - rotor
+    - tenet
+    - radar
+    - sas
+    - radar
+
+Paragraph 2:
+  Found 8 palindrome(s):
+    - anna
+    - radar
+    - hannah
+    - reifier
+    - reviver
+    - bob
+    - kayak
+    - ressasser
+
+Paragraph 3:
+  Found 5 palindrome(s):
+    - kayak
+    - bob
+    - refer
+    - radar
+    - radar
+```
