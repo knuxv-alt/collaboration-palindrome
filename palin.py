@@ -3,6 +3,7 @@ from typing import List, Dict
 #Commentaire
 
 def read_file(file_path: str) -> str:
+
     # TODO: Read the file and return its content as a string
     with open(file_path, 'r', encoding='utf-8') as file:
         txt = file.read()
@@ -18,10 +19,18 @@ def is_palindrome(word: str) -> bool:
     return word == word[::-1]
 
 def count_palindromes(paragraph: str) -> List[str]:
+
     # TODO: Find all palindromes in a paragraph
     # Split paragraph into words (SpaCy, NLTK or regex) and check for each word
     # Return a list of palindromes
-    pass
+    
+    List=[]
+    words = re.findall(r"\W+", paragraph.lower())
+    for i in words: 
+    if is_palindrome(i)==True    ##i == word[::-1]
+            List.add(word)
+               
+    return List
 
 def process_file(file_path: str) -> Dict[int, List[str]]:
     content = read_file(file_path)
