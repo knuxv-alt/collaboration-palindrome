@@ -3,6 +3,8 @@ from typing import List, Dict
 
 def read_file(file_path: str) -> str:
     # TODO: Read the file and return its content as a string
+    with open(file_path, 'r', encoding='utf-8') as file:
+    return file
     pass
 
 def split_into_paragraphs(text: str) -> List[str]:
