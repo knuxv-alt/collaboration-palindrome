@@ -27,7 +27,7 @@ def count_palindromes(paragraph: str) -> List[str]:
     List=[]
     words = re.findall(r"\W+", paragraph.lower())
     for i in words: 
-    if is_palindrome(word)==True    ##i == word[::-1]
+    if is_palindrome(i)==True    ##i == word[::-1]
             List.add(word)
                
     return List
