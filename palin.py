@@ -24,10 +24,18 @@ def count_palindromes(paragraph: str) -> List[str]:
     pass
 
 def process_file(file_path: str) -> Dict[int, List[str]]:
-    # TODO: Process a file and return the results
-    # Read the file, split into paragraphs, count palindromes in each paragraph
-    # Return a dictionary with paragraph numbers as keys and lists of palindromes as values
-    pass
+    content = read_file(file_path)
+    paragraphs = split_into_paragraphs(content)
+    palindromes_by_paragraph = {}
+    for i, paragraph in enumerate(paragraphs, 1):
+        words = paragraph.split()
+
+        palindromes = count_palindromes(words)
+
+        if palindromes:
+            palindromes_by_paragraph[i] = palindromes
+
+    return palindromes_by_paragraph
 
 def main(file_path: str) -> None:
     results = process_file(file_path)
