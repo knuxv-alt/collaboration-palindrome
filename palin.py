@@ -4,14 +4,14 @@ from typing import List, Dict
 
 def read_file(file_path: str) -> str:
     # TODO: Read the file and return its content as a string
-    with open(file_path, 'r', encoding='utf-8') as f:
-        file = f.read()
+    with open(file_path, 'r', encoding='utf-8') as file:
     return file
+    pass
 
 def split_into_paragraphs(text: str) -> List[str]:
-    # TODO: Split the text into paragraphs, a delimiter between two paragraphs is \n\n
-    # Return a list of paragraphs
-    pass
+    paragraphs = []
+    paragraphs = str.split("\n\n")
+    return paragraphs
 
 def is_palindrome(word: str) -> bool:
     word = word.lower()
