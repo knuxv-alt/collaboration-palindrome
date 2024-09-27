@@ -2,8 +2,7 @@ import sys
 from typing import List, Dict
 
 def read_file(file_path: str) -> str:
-    # TODO: Read the file and return its content as a string
-    pass
+        pass
 
 def split_into_paragraphs(text: str) -> List[str]:
     # TODO: Split the text into paragraphs, a delimiter between two paragraphs is \n\n
@@ -15,10 +14,18 @@ def is_palindrome(word: str) -> bool:
     pass
 
 def count_palindromes(paragraph: str) -> List[str]:
+
     # TODO: Find all palindromes in a paragraph
     # Split paragraph into words (SpaCy, NLTK or regex) and check for each word
     # Return a list of palindromes
-    pass
+    
+    List=[]
+    words = re.findall(r"\W+", paragraph.lower())
+    for i in words: 
+    if is_palindrome(word)==True    ##i == word[::-1]
+            List.add(word)
+               
+    return List
 
 def process_file(file_path: str) -> Dict[int, List[str]]:
     # TODO: Process a file and return the results
