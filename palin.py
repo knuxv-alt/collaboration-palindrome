@@ -1,5 +1,6 @@
 import sys
 from typing import List, Dict
+#Commentaire
 
 def read_file(file_path: str) -> str:
     # TODO: Read the file and return its content as a string
