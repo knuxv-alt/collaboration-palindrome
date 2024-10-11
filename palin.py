@@ -1,31 +1,30 @@
 import sys
 from typing import List, Dict
 import re
+from unidecode import unidecode
 #Commentaire
 #Test Fiona
-
 def read_file(file_path: str) -> str:
 
     # TODO: Read the file and return its content as a string
     with open(file_path, 'r', encoding='utf-8') as file:
         txt = file.read()
-
+    if txt == "":
+        raise ValueError('file is empty')
     return txt
 
 def split_into_paragraphs(text: str) -> List[str]:
     paragraphs = text.split("\n\n")
-    return paragraphs
+
+    return [p.strip() for p in paragraphs if p]
 
 def is_palindrome(word: str) -> bool:
-    word = word.lower()
+    word = unidecode(word.lower())
+    if len(word) <2:
+        return False
     return word == word[::-1]
 
 def count_palindromes(paragraph: str) -> List[str]:
-
-    # TODO: Find all palindromes in a paragraph
-    # Split paragraph into words (SpaCy, NLTK or regex) and check for each word
-    # Return a list of palindromes
-    
     lst_palindrome =[]
     words = re.findall(r"\w+", paragraph.lower())
     for word in words: 
@@ -52,7 +51,7 @@ def main(file_path: str) -> None:
     # Print results in a readable format
     for paragraph_num, palindromes in results.items():
         print(f"Paragraph {paragraph_num}:")
-        if palindromes:
+        if palindromes != "No Palindrome":
             print(f"  Found {len(palindromes)} palindrome(s):")
             for palindrome in palindromes:
                 print(f"    - {palindrome}")

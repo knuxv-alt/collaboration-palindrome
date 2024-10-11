@@ -10,9 +10,6 @@ def test_read_file_dont_exist():
     with pytest.raises(FileNotFoundError):
         read_file("ThisFileDontExist")
 
-def test_read_empty_option1():
-    # Fichier vide ==> retourne une chaine de caractère vide
-    assert read_file("data/palin_empty.txt") == ""
 
 def test_read_empty_option2():
     # OU AU CHOIX
