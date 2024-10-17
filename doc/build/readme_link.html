@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>README &mdash; Documentation palindrome 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7a28dfa3"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=e6b791cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            palindrome
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">README</a><ul>
+<li><a class="reference internal" href="#workflow-de-collaboration-git">Workflow de Collaboration Git</a><ul>
+<li><a class="reference internal" href="#vue-d-ensemble">Vue d’ensemble</a></li>
+<li><a class="reference internal" href="#etapes-cles">Étapes clés</a></li>
+<li><a class="reference internal" href="#points-importants-a-retenir">Points importants à retenir</a></li>
+<li><a class="reference internal" href="#resulats">Résulats</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">palindrome</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">README</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/readme_link.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="readme">
+<h1>README<a class="headerlink" href="#readme" title="Lien vers cette rubrique"></a></h1>
+<section id="workflow-de-collaboration-git">
+<h2>Workflow de Collaboration Git<a class="headerlink" href="#workflow-de-collaboration-git" title="Lien vers cette rubrique"></a></h2>
+<section id="vue-d-ensemble">
+<h3>Vue d’ensemble<a class="headerlink" href="#vue-d-ensemble" title="Lien vers cette rubrique"></a></h3>
+<p>Dans ce workflow, chaque développeur travaille sur une branche de fonctionnalité distincte et fusionne son travail dans la branche principale (main) via des pull requests.</p>
+</section>
+<section id="etapes-cles">
+<h3>Étapes clés<a class="headerlink" href="#etapes-cles" title="Lien vers cette rubrique"></a></h3>
+<ol class="arabic">
+<li><p>Cloner le dépôt</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="n">url</span><span class="o">-</span><span class="n">du</span><span class="o">-</span><span class="n">repo</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Créer une nouvelle branche de fonctionnalité (les branches ne doivent pas avoir le même nom)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">votre</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">branche</span>
+</pre></div>
+</div>
+</li>
+<li><p>Travailler sur votre fonctionnalité et faire des commits</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Description de vos changements&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Mettre à jour votre branche avec les derniers changements de main</strong></p>
+<p>Il faut prévoir qu’un autre étudiant a peut-être modifié la branche main, donc vous devez vous assurez que vous êtes à jour avant de merger vos propres changements.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">votre</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">branche</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">main</span>
+</pre></div>
+</div>
+</li>
+<li><p>Pousser votre branche vers le dépôt distant</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">votre</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">branche</span>
+</pre></div>
+</div>
+</li>
+<li><p>Créer une Pull Request sur GitHub</p>
+<ul class="simple">
+<li><p>Allez sur la page du dépôt GitHub</p></li>
+<li><p>Cliquez sur « New Pull Request »</p></li>
+<li><p>Sélectionnez votre branche pour fusionner dans main</p></li>
+</ul>
+</li>
+<li><p>Après révision et approbation, votre code sera fusionné dans main</p></li>
+</ol>
+</section>
+<section id="points-importants-a-retenir">
+<h3>Points importants à retenir<a class="headerlink" href="#points-importants-a-retenir" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p>Toujours travailler sur une branche de fonctionnalité, jamais directement sur main</p></li>
+<li><p>Mettre à jour régulièrement votre branche avec les derniers changements de main</p></li>
+<li><p>Nommer vos branches de manière descriptive (ex: feature/alice-menu-navigation)</p></li>
+<li><p>Faire des commits fréquents avec des messages clairs</p></li>
+<li><p>Créer une Pull Request pour chaque fonctionnalité terminée</p></li>
+</ul>
+<p>En suivant ce workflow, vous assurez une collaboration efficace et maintenez un historique de projet clair et organisé.</p>
+</section>
+<section id="resulats">
+<h3>Résulats<a class="headerlink" href="#resulats" title="Lien vers cette rubrique"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kevin-desktop@kevindesktop<span class="w"> </span>~/D/t/collaboration-palindrome<span class="w"> </span><span class="o">(</span>main<span class="o">)</span>&gt;<span class="w"> </span>python<span class="w"> </span>palin.py<span class="w">  </span>palin.txt<span class="w">                                        </span><span class="o">(</span>base<span class="o">)</span>
+Paragraph<span class="w"> </span><span class="m">1</span>:
+<span class="w">  </span>Found<span class="w"> </span><span class="m">7</span><span class="w"> </span>palindrome<span class="o">(</span>s<span class="o">)</span>:
+<span class="w">    </span>-<span class="w"> </span>radar
+<span class="w">    </span>-<span class="w"> </span>kayak
+<span class="w">    </span>-<span class="w"> </span>rotor
+<span class="w">    </span>-<span class="w"> </span>tenet
+<span class="w">    </span>-<span class="w"> </span>radar
+<span class="w">    </span>-<span class="w"> </span>sas
+<span class="w">    </span>-<span class="w"> </span>radar
+
+Paragraph<span class="w"> </span><span class="m">2</span>:
+<span class="w">  </span>Found<span class="w"> </span><span class="m">8</span><span class="w"> </span>palindrome<span class="o">(</span>s<span class="o">)</span>:
+<span class="w">    </span>-<span class="w"> </span>anna
+<span class="w">    </span>-<span class="w"> </span>radar
+<span class="w">    </span>-<span class="w"> </span>hannah
+<span class="w">    </span>-<span class="w"> </span>reifier
+<span class="w">    </span>-<span class="w"> </span>reviver
+<span class="w">    </span>-<span class="w"> </span>bob
+<span class="w">    </span>-<span class="w"> </span>kayak
+<span class="w">    </span>-<span class="w"> </span>ressasser
+
+Paragraph<span class="w"> </span><span class="m">3</span>:
+<span class="w">  </span>Found<span class="w"> </span><span class="m">5</span><span class="w"> </span>palindrome<span class="o">(</span>s<span class="o">)</span>:
+<span class="w">    </span>-<span class="w"> </span>kayak
+<span class="w">    </span>-<span class="w"> </span>bob
+<span class="w">    </span>-<span class="w"> </span>refer
+<span class="w">    </span>-<span class="w"> </span>radar
+<span class="w">    </span>-<span class="w"> </span>radar
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2024, KM.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
