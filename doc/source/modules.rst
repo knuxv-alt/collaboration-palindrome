@@ -5,7 +5,7 @@ collaboration-palindrome
    :maxdepth: 4
 
    palin
-   README
-   Instructions
+   readme_link
+   instruc_link.rst
 
 

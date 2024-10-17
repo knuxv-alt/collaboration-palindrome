@@ -15,3 +15,7 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
+   palin
+   readme_link
+   instruc_link.rst
+
